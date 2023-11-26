@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- Pragma Directives -->
+
+    <!-- <meta http-equiv="refresh" content="5" /> -->
+    <meta http-equiv="content-security-policy" content="default-src https:" />
+
+    <!-- Google SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Author: A.N. Author, Illustrator: P. Picture, Category: Books, Price:  £9.24, Length: 784 pages"
+    />
+    <meta
+      name="google-site-verification"
+      content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34="
+    />
+    <meta name="robots" content="noindex,nofollow" />
+
+    <!-- Facebook SEO Meta Tags Sample -->
+
+    <meta property="og:url" content="index.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="When Great Minds Don’t Think Alike" />
+    <meta property="og:description" content="My Recipe" />
+
+    <!-- PWA Tags -->
+
+    <link rel="manifest" href="manifest.json" />
+
+    <!-- Custom Tags -->
+    <!-- <meta name="description" content="This is a sample recipe website"> -->
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>My Recipes</title>
+  </head>
+  <body>
+    <header>
+      <h1>My Recipe Book</h1>
+      <nav>
+        <ul>
+          <li><a href="#appetizers">Appetizers</a></li>
+          <li><a href="#mains">Main Dishes</a></li>
+          <li><a href="#desserts">Desserts</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <span lang="ja">こんにちは、世界</span>
+
+      <section id="appetizers">
+        <h2>Appetizers</h2>
+        <article>
+          <h3>Cheesy Garlic Bread</h3>
+          <p>
+            This cheesy garlic bread is <strong>perfect</strong> for any
+            <em>Italian</em> meal.
+          </p>
+          <ul>
+            <li>1 loaf French bread, sliced in half lengthwise</li>
+            <li>1/2 cup butter, softened</li>
+            <li>2 tablespoons fresh parsley</li>
+            <li>1 teaspoon garlic powder</li>
+            <li>1 cup shredded mozzarella cheese</li>
+          </ul>
+          <ol>
+            <li>
+              Spread each half of bread with butter. Mix in parsley and garlic
+              powder.
+            </li>
+            <li>Sprinkle cheese evenly over the top.</li>
+            <li>Bake at 400°F for 10-15 minutes until cheese is melted.</li>
+          </ol>
+        </article>
+      </section>
+
+      <section id="mains">
+        <h2>Main Dishes</h2>
+        <article>
+          <h3>Chicken Parmesan</h3>
+          <p>
+            This classic <i>Italian</i> dish is made with breaded chicken cooked
+            to golden perfection.
+          </p>
+          <ul>
+            <li>2 boneless skinless chicken breasts</li>
+            <li>1/2 cup breadcrumbs</li>
+            <li>1/2 cup Parmesan cheese</li>
+            <li>2 eggs</li>
+            <li>2 cups marinara sauce</li>
+          </ul>
+          <ol>
+            <li>Dip chicken in egg, then breadcrumb mixture.</li>
+            <li>Fry chicken in pan until golden brown.</li>
+            <li>Top with marinara sauce and Parmesan cheese.</li>
+            <li>Bake at 450°F for 10 minutes.</li>
+          </ol>
+        </article>
+      </section>
+
+      <section id="desserts">
+        <h2>Desserts</h2>
+        <article>
+          <h3>Classic Chocolate Chip Cookies</h3>
+          <p>
+            These easy homemade chocolate chip cookies are soft, chewy, and full
+            of <b>chocolate chips</b>.
+          </p>
+          <ul>
+            <li>1⁄2 cup butter, softened</li>
+            <li>1⁄2 cup white sugar</li>
+            <li>1⁄2 cup brown sugar</li>
+            <li>1 egg</li>
+            <li>1 tsp vanilla</li>
+            <li>1 1⁄4 cups flour</li>
+            <li>1⁄2 tsp baking soda</li>
+            <li>1⁄4 tsp salt</li>
+            <li>1 cup chocolate chips</li>
+          </ul>
+          <ol>
+            <li>Cream together butter and sugars.</li>
+            <li>Beat in egg and vanilla.</li>
+            <li>Mix in dry ingredients.</li>
+            <li>Stir in chocolate chips.</li>
+            <li>Scoop dough and bake at 375°F for 8-10 minutes.</li>
+          </ol>
+          <aside><p>This is the content of an aside tag.</p></aside>
+        </article>
+      </section>
+    </main>
+    <audio controls>
+      <source src="/assets/sample-audio.mp3" type="audio/mp3" />
+    </audio>
+    <br />
+    <video controls>
+      <source src="/assets/baking-video.mp4" type="video/mp4" />
+    </video>
+    <br />
+    <form>
+      <fieldset>
+        <legend>Connect with us!</legend>
+        <label>Select your expertise:</label>
+        <input type="radio" id="beginner" name="expertise" />
+        <label for="beginner">Beginner</label>
+        <input type="radio" id="intermediate" name="expertise" />
+        <label for="intermediate">Intermediate</label>
+        <input type="radio" id="advanced" name="expertise" />
+        <label for="advanced">Advanced</label>
+        <br />
+        <label for="country">Select your country:</label>
+        <select id="country">
+          <optgroup label="North America">
+            <option value="canada">Canada</option>
+            <option value="us">US</option>
+            <option value="mexico">Mexico</option>
+          </optgroup>
+          <optgroup label="Asia">
+            <option value="russia">Russia</option>
+            <option value="china">China</option>
+          </optgroup>
+        </select>
+      </i>e />
+        <label for="continent">Select your continent:</label>
+        <datalist id="continents">
+          <option value="Africa"></option>
+          <option value="North America"></option>
+          <option value="South America"></option>
+        </datalist>
+        <input list="continents" id="continent" />
+
+        <br />
+        <label for="sample-text-area">Add any comments:</label>
+        <textarea id="sample-text-area">Your comment here...</textarea>
+        <br />
+        <button type="submit">Save</button>
+      </fieldset>
+    </form>
+    <br />
+    <details>
+      <summary>Hello!</summary>
+      If this is your first time here, please like and share!
+    </details>
+    <br />
+    <table>
+      <caption>
+        Table 1: blah
+      </caption>
+      <tr>
+        <th>Ingredients</th>
+        <th>Quantity</th>
+      </tr>
+      <tr>
+        <td>a</td>
+        <td>b</td>
+      </tr>
+      <tr>
+        <td>a</td>
+        <td>b</td>
+      </tr>
+      <tr>
+        <td>a</td>
+        <td>b</td>
+      </tr>
+    </table>
+
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <msup>
+        <mi>c</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>=</mo>
+      <msup>
+        <mi>a</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>+</mo>
+      <msup>
+        <mi>b</mi>
+        <mn>2</mn>
+      </msup>
+    </math>
+
+    <footer>
+      <hr> />
+      <p>Made with &hearts; by CSE 134B TAs</p>
+    </footer>
+  </body>
+</html>
