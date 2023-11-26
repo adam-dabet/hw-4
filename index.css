@@ -1,0 +1,330 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+:root {
+  --blue:  #2F2FA2;
+  --purple: color-mix(in srgb, var(--blue, blue) 66%,  purple 22%)
+
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family:"Montserrat", Arial;
+  background-color:#EDC7B7;
+  color: #2C3531;
+
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+@keyframes slidetext {
+  from {
+    margin-left: 100%;
+    width: 100%;
+  }
+
+  to {
+    margin-left:1.9%;
+    width: 100%;
+  }
+}
+@keyframes slideimg {
+  from {
+    margin-left: 100%;
+    width: 80%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 65%;
+  }
+}
+nav{
+  display: flex;
+  width:100%;
+  margin:auto;
+  padding:2rem 2rem;
+  align-items: center;
+  justify-content: space-between;
+  
+
+}
+.container{
+  position:relative;
+  width:100%;
+  height: 10dvh; 
+  overflow: scroll;
+  top: 2rem;
+  right: 0px;
+}
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  
+  
+  
+}
+.list{
+  font-size:2vw;
+  margin-left: 6rem;
+}
+.head{
+  text-align: center;
+  font-size: 5vw;
+  margin-top:100px;
+}
+h2{
+  font-size: 3vw;
+}
+h3{
+  font-size: 2.5vw;
+
+}
+section{
+  margin: 1.7vw  3.5vh;
+  
+}
+p{
+  font-size: 2vw;
+}
+table{
+  border: 0.5rem solid;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+  /*border-collapse: collapse;*/
+  background-color:black;
+
+}
+tr{
+  border: 5px solid black;
+}
+ td:nth-child(odd) { 
+  background-color: purple;
+  background-color: var(--purple) ; 
+
+  color:white;
+}
+td:nth-child(even) { 
+  background-color: lightblue; 
+  color:white;
+}
+td a{
+  background-color: lightblue;
+}
+
+td{
+
+  font-size: 2vw;
+  padding:1vw;
+  border-collapse: collapse;
+}
+
+@media (max-width: 600px) {
+  .images img{
+    height: 20dvh;
+    position: absolute;
+    left:68%;
+    bottom:55%;
+  }
+  .container{
+    position:relative;
+    width:100%;
+    height: 4dvh; 
+    overflow: scroll;
+    
+    
+  
+  }
+  #logo{
+    height: 3rem;
+    width:auto
+  }
+  
+  .button {
+    font-size: 2vw;
+    
+    width: 5rem;
+    height: 1.5rem;
+    display: inline-block;
+    margin: 0.1rem;
+    padding:0.2rem;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--purple);
+
+    color: white;    
+   
+  }
+
+  .intro{
+    margin-left: 8%;
+    margin-top:20%;
+  
+  }
+
+}    
+
+@media (min-width: 601px )and (max-width:899px) {
+  .images img{
+    height: 25dvh;
+    position: absolute;
+    left:68%;
+    bottom:45%;
+  }
+  
+
+  .button {
+    font-size: 2vw;
+    flex: 1;
+    width: 10vw;
+    height: 4dvh;
+    display: inline-block;
+    margin: 0.4rem;
+    padding:0.6rem;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    background-color: purple;
+    background-color:var(--purple);
+    color: white;    
+   
+  }
+  .intro{
+    margin-left: 8%;
+    margin-top:5%;
+  
+  }
+}
+
+@media (min-width: 850px) {
+    .container{
+      animation-duration: 2s;
+      animation-name: slidein;
+      height:3dvh;
+    
+  }
+  
+  
+  .images{
+    width: 40%;
+    height: 60%;
+    position: absolute;
+    bottom: 10px;
+    right:0px;
+    max-width: 100%;
+    display: block;
+  }
+  .images img{
+    height: 60dvh;
+    position: absolute;
+    left:50%;
+    bottom:0;
+    transform: translateX(-50%);
+    transition:bottom 1s, left 1s;
+    animation-duration: 1.5s;
+    animation-name: slideimg;  
+    
+  }
+  
+  .images:hover .me{
+    left:65%;
+  
+  }
+  
+  .intro{
+    margin-left: 8%;
+    margin-top:15%;
+    
+  }
+  
+  h1:has(+ p) {
+    font-size: 4.5vw;
+    
+    margin-bottom: 20px;
+    animation-duration: 2.5s;
+    animation-name: slidein;
+  }
+  .intro p{
+    font-size: 2vw;
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+  
+  
+  span{
+    color:orange;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .button {
+    font-size: 2vw;
+    flex: 1;
+    width: 16vw;
+    height: 6dvh;
+    margin:0;
+    top:50%;
+    vertical-align: auto;
+    display: inline-block;
+    text-decoration: none;
+    padding: 2dvh 1dvw;
+    border: none;
+    border-radius: 5px;
+    background-color:transparent;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+     
+  }
+  
+  .button:hover, .button:focus {
+    background-color: purple;
+    background-color: var(--purple);
+    color: white;
+  }
+  
+  .button:active {
+    background-color: #005cbf;
+    
+  }
+  .head{
+    animation-duration: 2.5s;
+    animation-name: slidein;
+  }
+  #contact{
+    animation-duration: 2.5s;
+    animation-name: slidein;
+  }
+  section{
+    animation-duration: 2.5s;
+    animation-name: slidetext;
+  }
+  #logo{
+    height: 10rem;
+    width:auto
+  }
+  
+
+}
