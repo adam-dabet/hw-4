@@ -73,8 +73,7 @@ nav ul li{
   padding: 0;
   overflow: hidden;
   
-  
-  
+
 }
 .list{
   font-size:2vw;
@@ -133,6 +132,68 @@ td{
   border-collapse: collapse;
 }
 
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    width: 100%;  
+    position: absolute;
+    top: 60%;
+    left: 45%;
+    transform: translate(-50%,-50%);
+
+    flex-wrap: wrap;
+
+}
+
+label {
+  margin-bottom: 5px;
+  font-size: 3vw;
+
+}
+
+input {
+  margin: 20px;
+  padding: 10px;
+  font-size: 2rem;
+
+}
+#submit{
+  padding: 5px;
+  color:white;
+  background-color: black;
+  font-size: 2rem;
+}
+
+output {
+  font-size: 2rem;
+  margin-top: 5px;
+  color: red; /* error message color */
+  display: none;
+}
+input:invalid {
+  border: 1px solid red; /* highlight invalid fields */
+}
+
+input:valid {
+  border: 1px solid green; /* default border for valid fields */
+}
+input:required:invalid + output {
+  display: block; /* show error messages for required invalid fields */
+}
+
+input:required:valid + output {
+  color: green; /* success message color for required valid fields */
+  display: block; /* show success messages for required valid fields */
+}
+
+
+output.success {
+  color: green; /* success message color */
+}
+
+
 @media (max-width: 600px) {
   .images img{
     height: 20dvh;
@@ -146,8 +207,6 @@ td{
     height: 4dvh; 
     overflow: scroll;
     
-    
-  
   }
   #logo{
     height: 3rem;
@@ -219,8 +278,7 @@ td{
       animation-name: slidein;
       height:3dvh;
     
-  }
-  
+    }
   
   .images{
     width: 40%;
@@ -324,6 +382,9 @@ td{
   #logo{
     height: 10rem;
     width:auto
+  }
+  h2.head{
+    font-size: 4vw;
   }
   
 
