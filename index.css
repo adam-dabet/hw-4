@@ -3,16 +3,28 @@
 
 :root {
   --blue:  #2F2FA2;
-  --purple: color-mix(in srgb, var(--blue, blue) 66%,  purple 22%)
+  --purple: color-mix(in srgb, var(--blue, blue) 66%,  purple 22%);
+  --primary-color: #302AE6;
+  --secondary-color: #536390;
+  --font-color: #2C3531;
+  --bg-color: #EDC7B7;
+  --heading-color: #292922;
 
+}
+[data-theme="dark"] {
+  --primary-color: #9A97F3;
+  --secondary-color: #818cab;
+  --font-color: #e1e1ff;
+  --bg-color: #161625;
+  --heading-color: #818cab;
 }
 
 *{
   padding: 0;
   margin: 0;
   font-family:"Montserrat", Arial;
-  background-color:#EDC7B7;
-  color: #2C3531;
+  background-color:var(--bg-color);
+  color:var(--font-color);
 
 }
 @keyframes slidein {
@@ -105,7 +117,7 @@ table{
   margin-right: auto;
   margin-top: 3rem;
   /*border-collapse: collapse;*/
-  background-color:black;
+  background-color:var(--font-color);
 
 }
 tr{
@@ -118,15 +130,13 @@ tr{
   color:white;
 }
 td:nth-child(even) { 
-  background-color: lightblue; 
+  background-color: var(--bg-color); 
   color:white;
 }
 td a{
-  background-color: lightblue;
+  background-color:var(--bg-color);
 }
-
 td{
-
   font-size: 2vw;
   padding:1vw;
   border-collapse: collapse;
@@ -134,65 +144,157 @@ td{
 
 form{
     display: flex;
+    margin-top: 50px;
     flex-direction: column;
     align-items: center;
     max-width: 300px;
     width: 100%;  
     position: absolute;
-    top: 60%;
-    left: 45%;
+    top: 70%;
+    left: 50%;
     transform: translate(-50%,-50%);
-
     flex-wrap: wrap;
 
 }
 
 label {
-  margin-bottom: 5px;
-  font-size: 3vw;
+  margin-bottom: 2px;
+  font-size: 2vw;
 
 }
 
 input {
-  margin: 20px;
-  padding: 10px;
-  font-size: 2rem;
+  margin: 10px;
+  padding: 5px;
+  font-size: 1rem;
 
 }
 #submit{
   padding: 5px;
-  color:white;
-  background-color: black;
+  margin: 5px;
+  color:var(--primary-color);
+  background-color: var(--bg-color);
   font-size: 2rem;
 }
 
 output {
   font-size: 2rem;
   margin-top: 5px;
-  color: red; /* error message color */
-  display: none;
+  color: red; 
 }
 input:invalid {
-  border: 1px solid red; /* highlight invalid fields */
+  border: 1px solid red;
+   
 }
 
 input:valid {
-  border: 1px solid green; /* default border for valid fields */
+  border: 1px solid green; 
 }
-input:required:invalid + output {
-  display: block; /* show error messages for required invalid fields */
+input:required:invalid+output{
+  display: block; 
+
+}
+#commentsError{
+  font-size: 1rem;
+  padding:5px;
+  
+}
+#nameError{
+  font-size: 1rem;
+  padding:5px;
+  
+}
+#infoOutput{
+  font-size: 1.5rem;
 }
 
-input:required:valid + output {
-  color: green; /* success message color for required valid fields */
-  display: block; /* show success messages for required valid fields */
+input:required:valid +output {
+  color: green; 
+  display: block; 
+}
+.flash-error {
+  animation: flash 3s;
+}
+@keyframes flash {
+  0%, 100% {
+      background-color: #ff9999;
+  }
+  50% {
+      background-color: transparent;
+  }
+}
+.fade-out {
+  animation: fadeOut 3s forwards;
 }
 
-
-output.success {
-  color: green; /* success message color */
+@keyframes fadeOut {
+  from {transition: translateY(0);opacity: 1}
+  to {transition: translateY(-150px);opacity: 0;top:0px;}
 }
 
+  
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 7px;
+
+  em {
+    margin-left: 5px;
+    font-size: 1rem;
+  }
+}
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display:none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+body{
+  color: var(--font-color);
+}
 
 @media (max-width: 600px) {
   .images img{
