@@ -237,6 +237,7 @@ input:required:valid +output {
   display: flex;
   align-items: center;
   padding: 7px;
+  
 
   em {
     margin-left: 5px;
