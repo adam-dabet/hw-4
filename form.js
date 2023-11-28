@@ -58,7 +58,7 @@ email.addEventListener("input",function (event) {
     comments.addEventListener("keydown",event => {
         updateCharacterCount(comments)
 
-        var nonTypicalCharactersRegex = /[^a-zA-Z0-9\s]/;
+        let nonTypicalCharactersRegex = /[^a-zA-Z0-9\s]/;
         if (nonTypicalCharactersRegex.test(event.key)) {
             event.preventDefault();
             comments.setCustomValidity('Comments should only contain alphanumeric characters and spaces.');
@@ -78,7 +78,7 @@ email.addEventListener("input",function (event) {
 
     nameInput.addEventListener("keydown",event => {
 
-        var nonTypicalCharactersRegex = /[^a-zA-Z\s]/;
+        let nonTypicalCharactersRegex = /[^a-zA-Z\s]/;
         if (nonTypicalCharactersRegex.test(event.key)) {
             event.preventDefault();
             nameInput.setCustomValidity('Name should only contain letters and spaces.');
@@ -96,9 +96,9 @@ email.addEventListener("input",function (event) {
     });
 
     function updateCharacterCount(textarea) {
-        var maxCharacters = 100;
-        var remainingCharacters = maxCharacters - textarea.value.length;
-        var infoOutput = document.getElementById('infoOutput');
+        const maxCharacters = 100;
+        let remainingCharacters = maxCharacters - textarea.value.length;
+        let infoOutput = document.getElementById('infoOutput');
 
         infoOutput.textContent = remainingCharacters + ' characters remaining';
 
